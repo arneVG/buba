@@ -1,6 +1,6 @@
-# budgiebackup
+# BUdgieBAckup
 
-Shell scripts for backing up and restoring budgie configs
+Shell script for backing up and restoring budgie configs
 
 ## dependencies
 
@@ -12,6 +12,7 @@ Only makes a backup of the configurations. Doesn't make backups of themes, apple
 
 ## usage
 
-run budgiebackup.sh to create a backup file
-
-run budgierestore.sh to restore a backup
+./budgiebackup.sh [args] <filename>
+args:
+  -c  create a backup
+  -r  restore a backup
