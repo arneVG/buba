@@ -1,10 +1,10 @@
-# BUdgieBAckup
+# buba
 
-Shell script for backing up and restoring budgie configs
+Vala program for backing up and restoring budgie configs
 
 ## dependencies
 
-Requires dconf
+- dconf
 
 ## notes
 
@@ -12,7 +12,8 @@ Only makes a backup of the configurations. Doesn't make backups of themes, apple
 
 ## usage
 
-./budgiebackup.sh [args] <filename>
-args:
+```shell
+./buba [args] <filename>
+ args:
   -c  create a backup
   -r  restore a backup
