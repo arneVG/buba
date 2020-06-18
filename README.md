@@ -1,14 +1,10 @@
-# buba
+# BuBa
 
-Vala program for backing up and restoring budgie configs
-
-## dependencies
-
-- dconf
+Tool for backing up and restoring Budgie layouts
 
 ## notes
 
-Only makes a backup of the configurations. Doesn't make backups of themes, applets or plank configs
+Only makes a backup of the current layout. Doesn't make backups of themes, applets, plank configs etc...
 
 ## usage
 
