@@ -1,6 +1,8 @@
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
+from .fileio import list_files
+
 
 class Window(Gtk.Window):
     def __init__(self):
@@ -12,16 +14,11 @@ class Window(Gtk.Window):
         grid.set_column_spacing(10)
         self.add(grid)
 
+        files = list_files()
+
         layout_liststore = Gtk.ListStore(str)
-        layout_liststore.append(["windows"])
-        layout_liststore.append(["MacOS"])
-        layout_liststore.append(["GNOME"])
-        layout_liststore.append(["windows"])
-        layout_liststore.append(["MacOS"])
-        layout_liststore.append(["GNOME"])
-        layout_liststore.append(["windows"])
-        layout_liststore.append(["MacOS"])
-        layout_liststore.append(["GNOME"])
+        for file in files:
+            layout_liststore.append([file])
 
         scrolled_window = Gtk.ScrolledWindow()
         scrolled_window.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
